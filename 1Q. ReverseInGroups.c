@@ -1,4 +1,5 @@
 /*
+### Array should be in descending order
 Reversing elements along with groups in array
 e.g.
 array = [8,7,6,5,4,3,2,1]
@@ -13,15 +14,18 @@ We have to do this in complexity  = O(N)
 int main()
 {   
     int k,n,i,j,m;
+    printf("Enter number of elements\n");
     scanf("%d",&n);
-    scanf("%d",&k);
     
     int arr[n];
     
     for(i=0;i<n;i++)
     {
-        arr[i]=i+1;
+        scanf("%d",&arr[i]);
     }
+    
+    printf("Enter group size");
+    scanf("%d",&k);
     
     for(i=0;i<n;i+=k)
     {
