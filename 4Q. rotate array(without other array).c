@@ -1,4 +1,12 @@
+/*
+e.g.
+input -> 
+size of array = 8
+array = [1, 2, 3, 4, 5, 6, 7, 8]
+rotation = 3
 
+output -> [6, 7, 8, 1, 2, 3, 4, 5]
+*/
 #include <stdio.h>
 
 int main()
