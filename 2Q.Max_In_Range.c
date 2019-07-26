@@ -19,7 +19,7 @@ int main()
 {
     printf("Hello World\n");
     
-    int x,n,i,max=-99999,m=-99999;
+    int x,n,i,max=-99999,m=-99999,min=99999;
     scanf("%d",&n);
 
     int L[n],R[n];
@@ -35,6 +35,14 @@ int main()
         if(max<R[i])
         {
             max=R[i];
+        }
+    }
+    
+    for(i=0;i<n;i++)
+    {
+        if(min>L[i])
+        {
+            min=L[i];
         }
     }
     
@@ -54,7 +62,7 @@ int main()
     }
     
     
-    for(i=1;i<=max;i++)
+    for(i=min;i<=max;i++)
     {
         arr[i]+=arr[i-1];
         if(m<arr[i])
