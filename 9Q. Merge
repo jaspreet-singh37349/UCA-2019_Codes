@@ -1,0 +1,60 @@
+/*
+e.g.
+input -> [[2,6],[3,8],[9,15],[11,14]]
+
+output -> [[2,8],[9,15]]
+*/
+
+#include <stdio.h>
+
+struct element
+{
+  int start;
+  int end;
+};
+
+int cmp(const void *p,const void *q)
+{
+    int l = ((struct element *)p)->start;
+    int r = ((struct element *)q)->start;
+    return l-r;
+}
+
+int main()
+{
+    int n,i,j;
+    scanf("%d",&n);
+    
+    struct element arr[n];
+    
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i].start);
+        scanf("%d",&arr[i].end);
+    }
+    j=0;
+    qsort(arr,n,sizeof(arr[0]),cmp);
+    
+    j=0;
+    for(i=1;i<n;i++)
+    {
+        if(arr[j].end>=arr[i].start)
+        {
+            if(arr[j].end<arr[i].end)
+            {
+                arr[j].end=arr[i].end;
+            }
+        }
+        else
+        {
+            j++;
+            arr[j].start=arr[i].start;
+            arr[j].end=arr[i].end;
+        }
+    }
+    printf("After Merging ->\n")
+    for(i=0;i<=j;i++)
+    {
+        printf("%d %d\n",arr[i].start,arr[i].end);
+    }
+}
