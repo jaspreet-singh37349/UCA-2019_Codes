@@ -22,7 +22,7 @@ int main()
 
     int arr[r][c];
     
-    for(;a<=r&&b<=c;)
+    for(;a<r&&b<c;)
     {
         for(i=b;i<c;i++)
         {
