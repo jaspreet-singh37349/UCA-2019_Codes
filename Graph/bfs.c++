@@ -66,7 +66,7 @@ int main()
     int n;
     cin>>n;
   
-    cout << "Following is Bredth First Traversal"
+    cout << "Following is Breadth First Traversal"
             " (starting from vertex "<<n<<") \n"; 
     g.BFS(n);
   
