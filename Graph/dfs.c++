@@ -33,9 +33,9 @@ class Graph{
 
     void DFS(int v)
     {
-        bool visited[v];
+        bool visited[V];
         int i;
-        for(i=0;i<v;i++)
+        for(i=0;i<V;i++)
         {
             visited[i]=false;
         }
