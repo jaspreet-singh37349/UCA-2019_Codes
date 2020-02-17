@@ -10,7 +10,7 @@ class Graph{
     
     public: Graph(int V)
     {
-        V = V;
+        this->V = V;
         arr = new list<int>[V];
     }
     void addEdge(int u,int v)
