@@ -24,6 +24,7 @@ using namespace std;
         3 5 14
         3 4 9
         4 5 10
+        0
     }
     
 */
